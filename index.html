@@ -50,10 +50,10 @@ stylesheet" />
     </footer>
     <script>
         var okta = new OktaSignIn({
-            baseUrl: "https://dev-5275061.okta.comDashboard",
+            baseUrl: "https://dev-5275061.okta.com",
             clientId: "0oa2kpljfDY1fgCPz5d6",
             authParams: {
-                issuer: "https://dev-5275061.okta.comDashboard/oauth2/default",
+                issuer: "https://dev-5275061.okta.com/oauth2/default",
                 responseType: ["token", "id_token"],
                 display: "page"
             }
@@ -75,9 +75,7 @@ stylesheet" />
                         //save the tokens for later use,
                         okta.tokenManager.add("accessToken", res[0]);
                         okta.tokenManager.add("idToken", res[1]);
-
                         console.log("user just logged in");
-
                     }, function error(err) {
                         alert("we werent able to log you in,something horrible must have happened. Please refresh the page");
                     }
